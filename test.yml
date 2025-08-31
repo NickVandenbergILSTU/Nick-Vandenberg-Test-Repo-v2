@@ -1,9 +1,8 @@
-# Simple YAML with a hello world message
-message: "Hello World"
-
-# For Docker Compose (docker-compose.yml)
-version: '3.8'
-services:
-  hello-world:
-    image: hello-world
-    container_name: hello_world_container
+# Azure DevOps Pipeline Configuration
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    exclude:
+      - README.md
