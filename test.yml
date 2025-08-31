@@ -1,4 +1,7 @@
 # Azure DevOps Pipeline Configuration
 trigger: none
 
-
+steps:
+- task: Bash@3
+  displayName: "Print Hello"
+  inputs: $(Build.SourcesDirectory)/test.sh
