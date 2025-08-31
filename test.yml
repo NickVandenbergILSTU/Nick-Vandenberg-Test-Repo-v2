@@ -1,8 +1,4 @@
 # Azure DevOps Pipeline Configuration
-trigger:
-  branches:
-    include:
-      - main
-  paths:
-    exclude:
-      - README.md
+trigger: none
+
+
