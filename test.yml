@@ -4,4 +4,4 @@ trigger: none
 steps:
 - task: Bash@3
   displayName: "Print Hello"
-  inputs: /test.sh
+  inputs: $(Build.SourcesDirectory)/test.sh
