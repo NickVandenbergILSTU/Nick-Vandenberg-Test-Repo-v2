@@ -1,31 +1,10 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Serve static files from the current directory
-app.use(express.static('.'));
-
-// Route to serve the HTML file
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Additional API endpoint (optional)
-app.get('/api/status', (req, res) => {
-    res.json({
-        message: 'Server is running',
-        timestamp: new Date().toISOString(),
-        file: 'index.html'
-    });
-});
-
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
-
-// Handle graceful shutdown
-process.on('SIGTERM', () => {
-    console.log('Server shutting down...');
-    process.exit(0);
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Page</title>
+</head>
+<body>
+  test
+</body>
+</html>
