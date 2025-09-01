@@ -1,8 +1,8 @@
 # Azure DevOps Pipeline Configuration
-trigger:
-  branches:
-    include:
-      - main
-  paths:
-    exclude:
-      - README.md
+trigger: none
+
+steps:
+- task: Bash@3
+  displayName: "Print Hello"
+  inputs: 
+    filePath: $(Build.SourcesDirectory)/test.sh
