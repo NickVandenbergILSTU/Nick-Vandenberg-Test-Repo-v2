@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "Opening "
+echo "Opening HTML file"
+
+xdg-open index.html
