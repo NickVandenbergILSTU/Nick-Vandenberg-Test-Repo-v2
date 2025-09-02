@@ -1,5 +1,7 @@
-# Azure DevOps Pipeline Configuration
 trigger: none
+
+pool:
+  vmImage: 'windows-latest'  # Use a Windows image
 
 steps:
 - task: Bash@3
